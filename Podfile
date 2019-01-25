@@ -6,5 +6,6 @@ target 'Insta Spot' do
   use_frameworks!
 
   pod 'FloatingPanel'
+  pod 'SnapLikeCollectionView'
 
 end

@@ -14,6 +14,8 @@
 		3737D0F121F30D6300014EDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3737D0EF21F30D6300014EDF /* LaunchScreen.storyboard */; };
 		37EFA2C321FABE9700C91900 /* VCMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EFA2C221FABE9700C91900 /* VCMain.swift */; };
 		37EFA2C721FACD8A00C91900 /* VCResultsPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EFA2C621FACD8A00C91900 /* VCResultsPanel.swift */; };
+		37EFA2CC21FAE7F000C91900 /* CVCScrollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EFA2CA21FAE7F000C91900 /* CVCScrollCell.swift */; };
+		37EFA2CD21FAE7F000C91900 /* CVCScrollCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37EFA2CB21FAE7F000C91900 /* CVCScrollCell.xib */; };
 		89DE77DB410359B56DF6435A /* Pods_Insta_Spot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCDBD9AEBAF22D3FBFA439D /* Pods_Insta_Spot.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +29,8 @@
 		3737D0F221F30D6300014EDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37EFA2C221FABE9700C91900 /* VCMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMain.swift; sourceTree = "<group>"; };
 		37EFA2C621FACD8A00C91900 /* VCResultsPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCResultsPanel.swift; sourceTree = "<group>"; };
+		37EFA2CA21FAE7F000C91900 /* CVCScrollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCScrollCell.swift; sourceTree = "<group>"; };
+		37EFA2CB21FAE7F000C91900 /* CVCScrollCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CVCScrollCell.xib; sourceTree = "<group>"; };
 		4F8FC8F400EE5585E40231AB /* Pods-Insta Spot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Insta Spot.release.xcconfig"; path = "Pods/Target Support Files/Pods-Insta Spot/Pods-Insta Spot.release.xcconfig"; sourceTree = "<group>"; };
 		8FCDBD9AEBAF22D3FBFA439D /* Pods_Insta_Spot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Insta_Spot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE47D406E2A24FBE193E035F /* Pods-Insta Spot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Insta Spot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Insta Spot/Pods-Insta Spot.debug.xcconfig"; sourceTree = "<group>"; };
@@ -73,14 +77,16 @@
 		3737D0E221F30D6200014EDF /* Insta Spot */ = {
 			isa = PBXGroup;
 			children = (
-				3737D0E321F30D6200014EDF /* AppDelegate.swift */,
-				3737D0E721F30D6200014EDF /* Main.storyboard */,
-				3737D0ED21F30D6300014EDF /* Assets.xcassets */,
-				3737D0EF21F30D6300014EDF /* LaunchScreen.storyboard */,
 				3737D0F221F30D6300014EDF /* Info.plist */,
 				3737D0EA21F30D6200014EDF /* Insta_Spot.xcdatamodeld */,
+				3737D0EF21F30D6300014EDF /* LaunchScreen.storyboard */,
+				3737D0ED21F30D6300014EDF /* Assets.xcassets */,
+				3737D0E321F30D6200014EDF /* AppDelegate.swift */,
+				37EFA2CB21FAE7F000C91900 /* CVCScrollCell.xib */,
+				3737D0E721F30D6200014EDF /* Main.storyboard */,
 				37EFA2C221FABE9700C91900 /* VCMain.swift */,
 				37EFA2C621FACD8A00C91900 /* VCResultsPanel.swift */,
+				37EFA2CA21FAE7F000C91900 /* CVCScrollCell.swift */,
 			);
 			path = "Insta Spot";
 			sourceTree = "<group>";
@@ -160,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3737D0F121F30D6300014EDF /* LaunchScreen.storyboard in Resources */,
+				37EFA2CD21FAE7F000C91900 /* CVCScrollCell.xib in Resources */,
 				3737D0EE21F30D6300014EDF /* Assets.xcassets in Resources */,
 				3737D0E921F30D6200014EDF /* Main.storyboard in Resources */,
 			);
@@ -200,12 +207,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Insta Spot/Pods-Insta Spot-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FloatingPanel/FloatingPanel.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapLikeCollectionView/SnapLikeCollectionView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FloatingPanel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapLikeCollectionView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -219,6 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37EFA2CC21FAE7F000C91900 /* CVCScrollCell.swift in Sources */,
 				3737D0EC21F30D6200014EDF /* Insta_Spot.xcdatamodeld in Sources */,
 				3737D0E421F30D6200014EDF /* AppDelegate.swift in Sources */,
 				37EFA2C721FACD8A00C91900 /* VCResultsPanel.swift in Sources */,
