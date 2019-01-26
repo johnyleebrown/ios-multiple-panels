@@ -10,6 +10,10 @@ import UIKit
 import MapKit
 import FloatingPanel
 
+protocol VCMainDelegate {
+    func updateMap(index:String)
+}
+
 class VCMain: UIViewController {
     
 
@@ -23,13 +27,19 @@ class VCMain: UIViewController {
     var resultsVC: VCResultsPanel!
     
     var coords:[[Double]] = [[51.5099728,-0.1371599]]
-    var deltas:[[Double]] = [[0.0525100023575723,0.05543697435880233]]
     var locationsNames:[String] = ["Piccadilly Circus"]
     var locationDescriptions:[String] = ["London, UK"]
     var locationsMarks:[Double] = [9.1]
+    let annotation = MKPointAnnotation()
     
+    var deltas:[[Double]] = [[0.0525100023575723,0.05543697435880233],[0.3025100023575723,0.30543697435880233]]
+    
+    let dict: Dictionary = ["rome":[41.902782, 12.496366],
+                            "cairo":[30.045322, 31.239624],
+                            "moscow":[55.751244, 37.618423],
+                            "new delhi":[28.644800, 77.216721]]
     //
-    // MARK
+    // MARK: - on start
     //
     
     override func viewDidLoad() {
@@ -50,6 +60,8 @@ class VCMain: UIViewController {
     }
     
     //
+    //
+    //
     // MARK: - mapView
     //
 
@@ -59,13 +71,13 @@ class VCMain: UIViewController {
         let region = MKCoordinateRegion(center: center, span: span)
         
         mapView.region = region
-        mapView.showsCompass = true
-        mapView.showsUserLocation = true
         mapView.delegate = self
     }
     
     //
-    // MARK: - mapView
+    //
+    //
+    // MARK: - ResultsPanel
     //
     
     func setupResultsPanel() {
@@ -80,6 +92,7 @@ class VCMain: UIViewController {
         fpc.surfaceView.shadowHidden = false
         
         resultsVC = storyboard?.instantiateViewController(withIdentifier: "ResultsPanel") as? VCResultsPanel
+        resultsVC.delegate = self
         
         // Set a content view controller
         fpc.set(contentViewController: resultsVC)
@@ -91,4 +104,21 @@ extension VCMain:MKMapViewDelegate {
 }
 
 extension VCMain:FloatingPanelControllerDelegate {
+}
+
+extension VCMain:VCMainDelegate {
+    
+    func updateMap(index:String) {
+        let loc:[Double] = dict[index]!
+        let center = CLLocationCoordinate2D(latitude: loc[0], longitude: loc[1])
+        let span = MKCoordinateSpan(latitudeDelta: deltas[1][0], longitudeDelta: deltas[1][1])
+        let region = MKCoordinateRegion(center: center, span: span)
+        mapView.region = region
+        
+        annotation.coordinate = CLLocationCoordinate2D(latitude: loc[0], longitude: loc[1])
+        mapView.addAnnotation(annotation)
+        
+        mapView.updateFocusIfNeeded()
+    }
+    
 }

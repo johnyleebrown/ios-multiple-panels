@@ -11,20 +11,11 @@ import SnapLikeCollectionView
 
 class CVCScrollCell: UICollectionViewCell, SnapLikeCell{
     
-//    @IBOutlet weak var bgView: UIView!
+    @IBOutlet weak var ivImage: UIImageView!
     
-    @IBOutlet weak var bgView: UIView! {
+    var item: [String]? {
         didSet {
-//            bgView.layer.backgroundColor = (UIColor.black.withAlphaComponent(0.2) as! CGColor)
-            bgView.layer.cornerRadius = 32
-        }
-    }
-    
-    @IBOutlet weak var laTitle: UILabel!
-    
-    var item: String? {
-        didSet {
-            laTitle.text = item!
+            ivImage.image = UIImage(named: item![0])
         }
     }
 }

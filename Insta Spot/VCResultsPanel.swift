@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapLikeCollectionView
+import MapKit
 
 class VCResultsPanel: UIViewController {
 
@@ -23,22 +24,28 @@ class VCResultsPanel: UIViewController {
     
     private var dataSource: SnapLikeDataSource<CVCScrollCell>?
     
+    let annotation = MKPointAnnotation()
+    
+    var delegate:VCMainDelegate?
+    
     //
     //
     //
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupLocationsScroll()
+        dataSource?.selectItem(IndexPath(item: 0, section: 0))
     }
-
+    
+    
     //
     //
     //
     
     func setupLocationsScroll() {
-        let cellSize = SnapLikeCellSize(normalWidth: 100, centerWidth: 160)
+        let cellSize = SnapLikeCellSize(normalWidth: 60, centerWidth: 80)
         
         dataSource = SnapLikeDataSource<CVCScrollCell>(collectionView: cvLocsCollection, cellSize: cellSize)
         dataSource?.delegate = self
@@ -53,18 +60,26 @@ class VCResultsPanel: UIViewController {
         cvLocsCollection.delegate = dataSource
         cvLocsCollection.dataSource = dataSource
         
-        dataSource?.items = ["A", "B", "C", "D", "E"]
+        dataSource?.items = [["moscow", "Russia"],
+                             ["new delhi", "India"],
+                             ["rome", "Italy"],
+                             ["cairo","Egypt"]]
     }
 }
 
 extension VCResultsPanel: SnapLikeDataDelegate {
     func cellSelected(_ index: Int) {
         DispatchQueue.main.async { [weak self] in
-            let selectedItem: String = self?.dataSource?.items[index] ?? ""
-            self?.laLocationName.text = selectedItem
+            let ds = (self?.dataSource)!
+            
+            self?.laLocationName.text = ds.items[index][0]
+            self?.delegate?.updateMap(index:ds.items[index][0])
+            self?.laLocationCity.text = ds.items[index][1]
         }
     }
 }
+
+
 
 extension UICollectionView {
     func registerNib<T: UICollectionViewCell>(_ cellType: T.Type){

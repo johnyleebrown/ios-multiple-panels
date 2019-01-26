@@ -83,10 +83,10 @@
 				3737D0ED21F30D6300014EDF /* Assets.xcassets */,
 				3737D0E321F30D6200014EDF /* AppDelegate.swift */,
 				37EFA2CB21FAE7F000C91900 /* CVCScrollCell.xib */,
+				37EFA2CA21FAE7F000C91900 /* CVCScrollCell.swift */,
 				3737D0E721F30D6200014EDF /* Main.storyboard */,
 				37EFA2C221FABE9700C91900 /* VCMain.swift */,
 				37EFA2C621FACD8A00C91900 /* VCResultsPanel.swift */,
-				37EFA2CA21FAE7F000C91900 /* CVCScrollCell.swift */,
 			);
 			path = "Insta Spot";
 			sourceTree = "<group>";
