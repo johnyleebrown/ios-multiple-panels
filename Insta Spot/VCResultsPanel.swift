@@ -31,6 +31,9 @@ class VCResultsPanel: UIViewController {
     //
     //
     //
+    //
+    //
+    //
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +42,9 @@ class VCResultsPanel: UIViewController {
         dataSource?.selectItem(IndexPath(item: 0, section: 0))
     }
     
-    
+    //
+    //
+    //
     //
     //
     //
@@ -67,6 +72,13 @@ class VCResultsPanel: UIViewController {
     }
 }
 
+//
+//
+//
+//
+//
+//
+
 extension VCResultsPanel: SnapLikeDataDelegate {
     func cellSelected(_ index: Int) {
         DispatchQueue.main.async { [weak self] in
@@ -78,8 +90,6 @@ extension VCResultsPanel: SnapLikeDataDelegate {
         }
     }
 }
-
-
 
 extension UICollectionView {
     func registerNib<T: UICollectionViewCell>(_ cellType: T.Type){

@@ -15,29 +15,38 @@ protocol VCMainDelegate {
 }
 
 class VCMain: UIViewController {
-    
 
     @IBOutlet weak var mapView: MKMapView!
     
-    //
-    // MARK
-    //
+    var fpcResults: FloatingPanelController!
     
-    var fpc: FloatingPanelController!
+    var fpcSearch: FloatingPanelController!
+    
     var resultsVC: VCResultsPanel!
     
-    var coords:[[Double]] = [[51.5099728,-0.1371599]]
+    var searchVC: VCSearchPanel!
+    
+    var coords:[[Double]] = [[51.5099728,
+                              -0.1371599]]
+    
     var locationsNames:[String] = ["Piccadilly Circus"]
+    
     var locationDescriptions:[String] = ["London, UK"]
+    
     var locationsMarks:[Double] = [9.1]
+    
     let annotation = MKPointAnnotation()
     
-    var deltas:[[Double]] = [[0.0525100023575723,0.05543697435880233],[0.3025100023575723,0.30543697435880233]]
+    var deltas:[[Double]] = [[0.0525100023575723,
+                              0.05543697435880233],
+                             [0.3025100023575723,
+                              0.30543697435880233]]
     
     let dict: Dictionary = ["rome":[41.902782, 12.496366],
                             "cairo":[30.045322, 31.239624],
                             "moscow":[55.751244, 37.618423],
                             "new delhi":[28.644800, 77.216721]]
+    //
     //
     // MARK: - on start
     //
@@ -50,16 +59,21 @@ class VCMain: UIViewController {
         
         // set up results view
         setupResultsPanel()
+        
+        // set up search view
+        setupSearchPanel()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+  
+        // Add FloatingPanel Results to a view with animation.
+        fpcResults.addPanel(toParent: self, animated: true)
         
-        //  Add FloatingPanel to a view with animation.
-        fpc.addPanel(toParent: self, animated: true)
+        // Add FloatingPanel Search to a view with animation.
+        fpcSearch.addPanel(toParent: self, animated: true)
     }
     
-    //
     //
     //
     // MARK: - mapView
@@ -76,29 +90,56 @@ class VCMain: UIViewController {
     
     //
     //
-    //
     // MARK: - ResultsPanel
     //
     
     func setupResultsPanel() {
         // Do any additional setup after loading the view, typically from a nib.
         // Initialize FloatingPanelController
-        fpc = FloatingPanelController()
-        fpc.delegate = self
+        fpcResults = FloatingPanelController()
+        fpcResults.delegate = self
         
         // Initialize FloatingPanelController and add the view
-        fpc.surfaceView.backgroundColor = .clear
-        fpc.surfaceView.cornerRadius = 9.0
-        fpc.surfaceView.shadowHidden = false
+        fpcResults.surfaceView.backgroundColor = .clear
+        fpcResults.surfaceView.cornerRadius = 9.0
+        fpcResults.surfaceView.shadowHidden = false
         
         resultsVC = storyboard?.instantiateViewController(withIdentifier: "ResultsPanel") as? VCResultsPanel
         resultsVC.delegate = self
         
         // Set a content view controller
-        fpc.set(contentViewController: resultsVC)
-        fpc.track(scrollView: resultsVC.svLocationContent)
+        fpcResults.set(contentViewController: resultsVC)
+        fpcResults.track(scrollView: resultsVC.svLocationContent)
+    }
+    
+    //
+    //
+    // MARK: - SearchPanel
+    //
+    
+    func setupSearchPanel() {
+        // Do any additional setup after loading the view, typically from a nib.
+        // Initialize FloatingPanelController
+        fpcSearch = FloatingPanelController()
+        fpcSearch.delegate = self
+        
+        // Initialize FloatingPanelController and add the view
+        fpcSearch.surfaceView.backgroundColor = .clear
+        fpcSearch.surfaceView.cornerRadius = 20.0
+        
+        searchVC = storyboard?.instantiateViewController(withIdentifier: "SearchPanel") as? VCSearchPanel
+        
+        // Set a content view controller
+        fpcSearch.set(contentViewController: searchVC)
+        fpcSearch.track(scrollView: searchVC.cvSearchResults)
     }
 }
+
+//
+//
+//
+//
+//
 
 extension VCMain:MKMapViewDelegate {
 }
