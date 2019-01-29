@@ -28,6 +28,8 @@ class VCResultsPanel: UIViewController {
     
     var delegate:VCMainDelegate?
     
+    var searchVC: VCSearchPanel!
+    
     //
     //
     //
@@ -40,6 +42,9 @@ class VCResultsPanel: UIViewController {
         
         setupLocationsScroll()
         dataSource?.selectItem(IndexPath(item: 0, section: 0))
+        
+//        searchVC = storyboard?.instantiateViewController(withIdentifier: "SearchPanel") as? VCSearchPanel
+//        searchVC.resultDelegate = self
     }
     
     //
@@ -64,11 +69,11 @@ class VCResultsPanel: UIViewController {
         cvLocsCollection.backgroundColor = .clear
         cvLocsCollection.delegate = dataSource
         cvLocsCollection.dataSource = dataSource
-        
-        dataSource?.items = [["moscow", "Russia"],
-                             ["new delhi", "India"],
-                             ["rome", "Italy"],
-                             ["cairo","Egypt"]]
+       
+        dataSource?.items = [["rome", "Italy"],
+                             ["cairo","Egypt"],
+                             ["moscow", "Russia"],
+                             ["new delhi", "India"]]
     }
 }
 
@@ -83,10 +88,12 @@ extension VCResultsPanel: SnapLikeDataDelegate {
     func cellSelected(_ index: Int) {
         DispatchQueue.main.async { [weak self] in
             let ds = (self?.dataSource)!
-            
             self?.laLocationName.text = ds.items[index][0]
             self?.delegate?.updateMap(index:ds.items[index][0])
             self?.laLocationCity.text = ds.items[index][1]
+            self?.cvLocsCollection.selectItem(at: IndexPath(item: index, section: 0), animated: true, scrollPosition: UICollectionView.ScrollPosition.centeredHorizontally
+            )
+            
         }
     }
 }

@@ -18,6 +18,7 @@ class CVCSearchCell: UICollectionViewCell {
         var colors = getColors()
         
         viSearchCell.translatesAutoresizingMaskIntoConstraints = false
+        viSearchCell.backgroundColor = UIColor(white: 0.3, alpha: 1)
         viSearchCell.cornerRadius = 10
         viSearchCell.topColor = UIColor(hex: colors[0])
         viSearchCell.bottomColor = UIColor(hex: colors[0])

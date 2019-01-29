@@ -11,7 +11,9 @@ import MapKit
 import FloatingPanel
 
 protocol VCMainDelegate {
+    func getPanelPosition(name:String) -> FloatingPanelPosition?
     func updateMap(index:String)
+    func setPanel(panel: String, position:FloatingPanelPosition)
 }
 
 class VCMain: UIViewController {
@@ -57,11 +59,26 @@ class VCMain: UIViewController {
         // set up map view
         setupMapView()
         
+        
         // set up results view
         setupResultsPanel()
         
         // set up search view
         setupSearchPanel()
+        
+    }
+    
+    func printAllSubviews(of view: UIView, from layer: Int) {
+        for _ in 0..<layer {
+            print(" ", separator: "", terminator: "")
+        }
+        print("\(view): ")
+        let subView = view.subviews
+        if subView.count != 0 {
+            subView.forEach({ (view) in
+                printAllSubviews(of: view, from: layer + 1)
+            })
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -73,6 +90,8 @@ class VCMain: UIViewController {
         // Add FloatingPanel Search to a view with animation.
         fpcSearch.addPanel(toParent: self, animated: true)
         fpcSearch.move(to: .full, animated: true)
+        
+//        printAllSubviews(of: view, from: 0)
     }
     
     //
@@ -108,6 +127,7 @@ class VCMain: UIViewController {
         resultsVC = storyboard?.instantiateViewController(withIdentifier: "ResultsPanel") as? VCResultsPanel
         resultsVC.delegate = self
         
+        
         // Set a content view controller
         fpcResults.set(contentViewController: resultsVC)
         fpcResults.track(scrollView: resultsVC.svLocationContent)
@@ -129,6 +149,8 @@ class VCMain: UIViewController {
         fpcSearch.surfaceView.cornerRadius = 20.0
         
         searchVC = storyboard?.instantiateViewController(withIdentifier: "SearchPanel") as? VCSearchPanel
+        searchVC.mainDelegate = self
+        searchVC.resultDelegate = resultsVC
         
         // Set a content view controller
         fpcSearch.set(contentViewController: searchVC)
@@ -149,6 +171,43 @@ extension VCMain:FloatingPanelControllerDelegate {
 }
 
 extension VCMain:VCMainDelegate {
+    func getPanelPosition(name: String) -> FloatingPanelPosition? {
+        switch name {
+        case "search":
+            return fpcSearch.position
+        case "result":
+            return fpcResults.position
+        default:
+            return nil
+        }
+    }
+    
+    
+//    func getPositionFromStr(position: String) -> FloatingPanelPosition {
+//        switch position {
+//        case "hidden":
+//            return .hidden
+//        case "full":
+//            return .full
+//        case "half":
+//            return .half
+//        case "tip":
+//            return .tip
+//        default:
+//            return .tip
+//        }
+//    }
+    
+    func setPanel(panel: String, position: FloatingPanelPosition) {
+        switch panel {
+        case "result":
+            fpcResults.move(to: position, animated: true)
+        case "search":
+            fpcSearch.move(to: position, animated: true)
+        default:
+            return
+        }
+    }
     
     func updateMap(index:String) {
         let loc:[Double] = dict[index]!
@@ -164,3 +223,4 @@ extension VCMain:VCMainDelegate {
     }
     
 }
+

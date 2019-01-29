@@ -33,8 +33,8 @@ class GradientView: UIView {
     private lazy var gradientLayer: CAGradientLayer = {
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [topColor.cgColor, bottomColor.cgColor]
-        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
-        gradientLayer.endPoint = CGPoint(x: 0, y: 1)
+//        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+//        gradientLayer.endPoint = CGPoint(x: 0, y: 1)
         return gradientLayer
     }()
     
@@ -55,9 +55,9 @@ class GradientView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         gradientLayer.frame = bounds
-        let maskLayer = CAShapeLayer()
-        maskLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius ?? bounds.width * 0.2).cgPath
-        layer.mask = maskLayer
+//        let maskLayer = CAShapeLayer()
+//        maskLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius ?? bounds.width * 0.2).cgPath
+//        layer.mask = maskLayer
     }
     
     private func updateGradientColors() {

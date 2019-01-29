@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FloatingPanel
 
 class VCSearchPanel: UIViewController {
 
@@ -19,6 +20,17 @@ class VCSearchPanel: UIViewController {
     var filtteredCities = [City]()
     
     let searchController = UISearchController(searchResultsController: nil)
+    
+    var mainDelegate:VCMainDelegate?
+    
+    var resultDelegate:VCResultsPanel?
+
+    let dict: Dictionary = ["rome":[41.902782, 12.496366],
+                            "cairo":[30.045322, 31.239624],
+                            "moscow":[55.751244, 37.618423],
+                            "new delhi":[28.644800, 77.216721]]
+    
+    let dictAr = ["rome", "cairo","moscow","new delhi"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,23 +52,42 @@ class VCSearchPanel: UIViewController {
 }
 
 extension VCSearchPanel:UISearchBarDelegate {
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filterContent(searchText: searchText)
     }
     
     func filterContent(searchText:String) {
         filtteredCities = listOfCities.filter({(city:City) -> Bool in
-            return (city.title?.lowercased().contains(searchText.lowercased()))!
+            return (city.title.lowercased().contains(searchText.lowercased()))
         })
         cvSearchResults.reloadData()
     }
-}
-
-extension VCSearchPanel:UICollectionViewDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+//        print("searchBarSearchButtonClicked")
+        self.view.endEditing(true)
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+//        print("searchBarTextDidBeginEditing")
+    }
+    
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        print("searchBarShouldBeginEditing")
+        
+        if mainDelegate?.getPanelPosition(name: "search") == FloatingPanelPosition.tip {
+            
+            mainDelegate?.setPanel(panel: "search", position: FloatingPanelPosition.full)
+        }
+        
+        return true
+    }
+    
     
 }
 
-extension VCSearchPanel:UICollectionViewDataSource {
+extension VCSearchPanel:UICollectionViewDelegate, UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -69,25 +100,37 @@ extension VCSearchPanel:UICollectionViewDataSource {
         
         let cell:CVCSearchCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CVCSearchCell", for: indexPath) as! CVCSearchCell
         
-        cell.setUp(label: filtteredCities[indexPath.row].title!)
+        cell.setUp(label: filtteredCities[indexPath.row].title)
         
         return cell
     }
-}
-
-class City: NSObject {
-    var title:String?
     
-    init(title:String) {
-        self.title = title
+    
+//    func indexOfQuestion(id: Int) -> Int {
+//        return dict.indexOf { (question) -> Bool in
+//            return question["quesID"] as? Int == id
+//            } ?? NSNotFound
+//    }
+
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.view.endEditing(true)
+        mainDelegate?.setPanel(panel: "search", position: FloatingPanelPosition.tip)
+        mainDelegate?.setPanel(panel: "result", position: FloatingPanelPosition.half)
+        
+        var sel = filtteredCities[indexPath.row].title
+
+        print(resultDelegate)
+        resultDelegate?.cellSelected(dictAr.firstIndex(of: sel)!)
     }
 }
 
-extension UICollectionView {
-    func registerNib<T: UICollectionViewCell>(_ cellType: T.Type){
-        let nibName = String(describing: cellType)
-        print(nibName)
-        let nib = UINib(nibName: nibName, bundle: nil)
-        register(nib, forCellWithReuseIdentifier: nibName)
+
+
+class City: NSObject {
+    var title:String
+    
+    init(title:String) {
+        self.title = title
     }
 }
