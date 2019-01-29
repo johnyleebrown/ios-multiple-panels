@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		371941B421FEDDBE00624BD8 /* CVCSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371941B221FEDDBE00624BD8 /* CVCSearchCell.swift */; };
+		371941B521FEDDBE00624BD8 /* CVCSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 371941B321FEDDBE00624BD8 /* CVCSearchCell.xib */; };
 		3737D0E421F30D6200014EDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3737D0E321F30D6200014EDF /* AppDelegate.swift */; };
 		3737D0E921F30D6200014EDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3737D0E721F30D6200014EDF /* Main.storyboard */; };
 		3737D0EC21F30D6200014EDF /* Insta_Spot.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3737D0EA21F30D6200014EDF /* Insta_Spot.xcdatamodeld */; };
 		3737D0EE21F30D6300014EDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3737D0ED21F30D6300014EDF /* Assets.xcassets */; };
 		3737D0F121F30D6300014EDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3737D0EF21F30D6300014EDF /* LaunchScreen.storyboard */; };
+		37C628F621FFE8B7003258A1 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C628F521FFE8B7003258A1 /* UIColorExtensions.swift */; };
 		37D9CE9C21FD494F00131F4D /* VCSearchPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D9CE9B21FD494F00131F4D /* VCSearchPanel.swift */; };
-		37D9CEA121FD4D3200131F4D /* CVCSearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D9CE9F21FD4D3200131F4D /* CVCSearchResultCell.swift */; };
-		37D9CEA221FD4D3200131F4D /* CVCSearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37D9CEA021FD4D3200131F4D /* CVCSearchResultCell.xib */; };
 		37D9CEA521FD4DF800131F4D /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D9CEA421FD4DF800131F4D /* GradientView.swift */; };
 		37EFA2C321FABE9700C91900 /* VCMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EFA2C221FABE9700C91900 /* VCMain.swift */; };
 		37EFA2C721FACD8A00C91900 /* VCResultsPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EFA2C621FACD8A00C91900 /* VCResultsPanel.swift */; };
@@ -23,7 +24,19 @@
 		89DE77DB410359B56DF6435A /* Pods_Insta_Spot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCDBD9AEBAF22D3FBFA439D /* Pods_Insta_Spot.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		37D9CEAF21FDBB8100131F4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3737D0D821F30D6200014EDF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3737D0DF21F30D6200014EDF;
+			remoteInfo = "Insta Spot";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		371941B221FEDDBE00624BD8 /* CVCSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCSearchCell.swift; sourceTree = "<group>"; };
+		371941B321FEDDBE00624BD8 /* CVCSearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CVCSearchCell.xib; sourceTree = "<group>"; };
 		3737D0E021F30D6200014EDF /* Insta Spot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Insta Spot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3737D0E321F30D6200014EDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3737D0E821F30D6200014EDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -31,10 +44,10 @@
 		3737D0ED21F30D6300014EDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3737D0F021F30D6300014EDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3737D0F221F30D6300014EDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37C628F521FFE8B7003258A1 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		37D9CE9B21FD494F00131F4D /* VCSearchPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCSearchPanel.swift; sourceTree = "<group>"; };
-		37D9CE9F21FD4D3200131F4D /* CVCSearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCSearchResultCell.swift; sourceTree = "<group>"; };
-		37D9CEA021FD4D3200131F4D /* CVCSearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CVCSearchResultCell.xib; sourceTree = "<group>"; };
 		37D9CEA421FD4DF800131F4D /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		37D9CEAA21FDBB8100131F4D /* Insta Spot Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Insta Spot Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37EFA2C221FABE9700C91900 /* VCMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMain.swift; sourceTree = "<group>"; };
 		37EFA2C621FACD8A00C91900 /* VCResultsPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCResultsPanel.swift; sourceTree = "<group>"; };
 		37EFA2CA21FAE7F000C91900 /* CVCScrollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCScrollCell.swift; sourceTree = "<group>"; };
@@ -50,6 +63,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				89DE77DB410359B56DF6435A /* Pods_Insta_Spot.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37D9CEA721FDBB8100131F4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				3737D0E021F30D6200014EDF /* Insta Spot.app */,
+				37D9CEAA21FDBB8100131F4D /* Insta Spot Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -85,20 +106,21 @@
 		3737D0E221F30D6200014EDF /* Insta Spot */ = {
 			isa = PBXGroup;
 			children = (
+				37D9CEA321FD4DCC00131F4D /* Custom */,
 				3737D0F221F30D6300014EDF /* Info.plist */,
 				3737D0EA21F30D6200014EDF /* Insta_Spot.xcdatamodeld */,
 				3737D0EF21F30D6300014EDF /* LaunchScreen.storyboard */,
 				3737D0ED21F30D6300014EDF /* Assets.xcassets */,
 				3737D0E321F30D6200014EDF /* AppDelegate.swift */,
 				37EFA2CB21FAE7F000C91900 /* CVCScrollCell.xib */,
+				37EFA2C221FABE9700C91900 /* VCMain.swift */,
 				37EFA2CA21FAE7F000C91900 /* CVCScrollCell.swift */,
+				37EFA2C621FACD8A00C91900 /* VCResultsPanel.swift */,
 				3737D0E721F30D6200014EDF /* Main.storyboard */,
 				37D9CE9B21FD494F00131F4D /* VCSearchPanel.swift */,
-				37EFA2C621FACD8A00C91900 /* VCResultsPanel.swift */,
-				37EFA2C221FABE9700C91900 /* VCMain.swift */,
-				37D9CE9F21FD4D3200131F4D /* CVCSearchResultCell.swift */,
-				37D9CEA021FD4D3200131F4D /* CVCSearchResultCell.xib */,
-				37D9CEA321FD4DCC00131F4D /* Custom */,
+				371941B221FEDDBE00624BD8 /* CVCSearchCell.swift */,
+				371941B321FEDDBE00624BD8 /* CVCSearchCell.xib */,
+				37C628F521FFE8B7003258A1 /* UIColorExtensions.swift */,
 			);
 			path = "Insta Spot";
 			sourceTree = "<group>";
@@ -142,6 +164,24 @@
 			productReference = 3737D0E021F30D6200014EDF /* Insta Spot.app */;
 			productType = "com.apple.product-type.application";
 		};
+		37D9CEA921FDBB8100131F4D /* Insta Spot Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37D9CEB121FDBB8100131F4D /* Build configuration list for PBXNativeTarget "Insta Spot Tests" */;
+			buildPhases = (
+				37D9CEA621FDBB8100131F4D /* Sources */,
+				37D9CEA721FDBB8100131F4D /* Frameworks */,
+				37D9CEA821FDBB8100131F4D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37D9CEB021FDBB8100131F4D /* PBXTargetDependency */,
+			);
+			name = "Insta Spot Tests";
+			productName = "Insta Spot Tests";
+			productReference = 37D9CEAA21FDBB8100131F4D /* Insta Spot Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -160,6 +200,10 @@
 							};
 						};
 					};
+					37D9CEA921FDBB8100131F4D = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 3737D0DF21F30D6200014EDF;
+					};
 				};
 			};
 			buildConfigurationList = 3737D0DB21F30D6200014EDF /* Build configuration list for PBXProject "Insta Spot" */;
@@ -176,6 +220,7 @@
 			projectRoot = "";
 			targets = (
 				3737D0DF21F30D6200014EDF /* Insta Spot */,
+				37D9CEA921FDBB8100131F4D /* Insta Spot Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -185,11 +230,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				371941B521FEDDBE00624BD8 /* CVCSearchCell.xib in Resources */,
 				3737D0F121F30D6300014EDF /* LaunchScreen.storyboard in Resources */,
 				37EFA2CD21FAE7F000C91900 /* CVCScrollCell.xib in Resources */,
 				3737D0EE21F30D6300014EDF /* Assets.xcassets in Resources */,
-				37D9CEA221FD4D3200131F4D /* CVCSearchResultCell.xib in Resources */,
 				3737D0E921F30D6200014EDF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37D9CEA821FDBB8100131F4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +301,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37C628F621FFE8B7003258A1 /* UIColorExtensions.swift in Sources */,
+				371941B421FEDDBE00624BD8 /* CVCSearchCell.swift in Sources */,
 				37EFA2CC21FAE7F000C91900 /* CVCScrollCell.swift in Sources */,
 				3737D0EC21F30D6200014EDF /* Insta_Spot.xcdatamodeld in Sources */,
 				3737D0E421F30D6200014EDF /* AppDelegate.swift in Sources */,
@@ -256,11 +310,25 @@
 				37EFA2C321FABE9700C91900 /* VCMain.swift in Sources */,
 				37D9CE9C21FD494F00131F4D /* VCSearchPanel.swift in Sources */,
 				37D9CEA521FD4DF800131F4D /* GradientView.swift in Sources */,
-				37D9CEA121FD4D3200131F4D /* CVCSearchResultCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37D9CEA621FDBB8100131F4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		37D9CEB021FDBB8100131F4D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3737D0DF21F30D6200014EDF /* Insta Spot */;
+			targetProxy = 37D9CEAF21FDBB8100131F4D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3737D0E721F30D6200014EDF /* Main.storyboard */ = {
@@ -436,6 +504,46 @@
 			};
 			name = Release;
 		};
+		37D9CEB221FDBB8100131F4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D87AGA62LJ;
+				INFOPLIST_FILE = "Insta Spot Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "me.grigorii.Insta-Spot-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Insta Spot.app/Insta Spot";
+			};
+			name = Debug;
+		};
+		37D9CEB321FDBB8100131F4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D87AGA62LJ;
+				INFOPLIST_FILE = "Insta Spot Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "me.grigorii.Insta-Spot-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Insta Spot.app/Insta Spot";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -453,6 +561,15 @@
 			buildConfigurations = (
 				3737D0F621F30D6300014EDF /* Debug */,
 				3737D0F721F30D6300014EDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37D9CEB121FDBB8100131F4D /* Build configuration list for PBXNativeTarget "Insta Spot Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37D9CEB221FDBB8100131F4D /* Debug */,
+				37D9CEB321FDBB8100131F4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

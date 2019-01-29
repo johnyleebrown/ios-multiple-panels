@@ -72,6 +72,7 @@ class VCMain: UIViewController {
         
         // Add FloatingPanel Search to a view with animation.
         fpcSearch.addPanel(toParent: self, animated: true)
+        fpcSearch.move(to: .full, animated: true)
     }
     
     //

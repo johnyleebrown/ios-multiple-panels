@@ -134,6 +134,9 @@
                                                 <string>Title</string>
                                                 <string>Title</string>
                                             </scopeButtonTitles>
+                                            <connections>
+                                                <outlet property="delegate" destination="k4L-wo-sSG" id="NUQ-k6-E2G"/>
+                                            </connections>
                                         </searchBar>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VyI-kC-RCu">
                                             <rect key="frame" x="8" y="86" width="359" height="726"/>
@@ -145,17 +148,7 @@
                                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                 <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                             </collectionViewFlowLayout>
-                                            <cells>
-                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="wzF-Ry-3qG" customClass="CVCSearchResultCell" customModule="Insta_Spot" customModuleProvider="target">
-                                                    <rect key="frame" x="10" y="0.0" width="164" height="96"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                        <rect key="frame" x="0.0" y="0.0" width="164" height="96"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                    </view>
-                                                    <color key="backgroundColor" red="0.44866397699999999" green="0.87754967419999996" blue="1" alpha="0.65388424300000003" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </collectionViewCell>
-                                            </cells>
+                                            <cells/>
                                         </collectionView>
                                     </subviews>
                                 </view>
