@@ -105,23 +105,16 @@ extension VCSearchPanel:UICollectionViewDelegate, UICollectionViewDataSource {
         return cell
     }
     
-    
-//    func indexOfQuestion(id: Int) -> Int {
-//        return dict.indexOf { (question) -> Bool in
-//            return question["quesID"] as? Int == id
-//            } ?? NSNotFound
-//    }
-
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         self.view.endEditing(true)
         mainDelegate?.setPanel(panel: "search", position: FloatingPanelPosition.tip)
         mainDelegate?.setPanel(panel: "result", position: FloatingPanelPosition.half)
         
         var sel = filtteredCities[indexPath.row].title
 
-        print(resultDelegate)
         resultDelegate?.cellSelected(dictAr.firstIndex(of: sel)!)
+        
     }
 }
 

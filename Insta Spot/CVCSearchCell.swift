@@ -10,23 +10,27 @@ import UIKit
 
 class CVCSearchCell: UICollectionViewCell {
 
-    @IBOutlet weak var viSearchCell: GradientView!
+    @IBOutlet weak var viSearchCell: UIView!
    
     @IBOutlet weak var laCellTitle: UILabel!
     
     func setUp(label:String) {
-        var colors = getColors()
-        
-        viSearchCell.translatesAutoresizingMaskIntoConstraints = false
-        viSearchCell.backgroundColor = UIColor(white: 0.3, alpha: 1)
-        viSearchCell.cornerRadius = 10
-        viSearchCell.topColor = UIColor(hex: colors[0])
-        viSearchCell.bottomColor = UIColor(hex: colors[0])
-        
+        viSearchCell.layer.addSublayer(getGradientLayer())
         laCellTitle.text = label
         laCellTitle.adjustsFontSizeToFitWidth = true
         laCellTitle.textColor = UIColor(hex: 0xFFFFFF)
         laCellTitle.layer.zPosition = 1
+    }
+    
+    func getGradientLayer() -> CAGradientLayer {
+        let gradientLayer = CAGradientLayer()
+        var colors = getColors()
+        gradientLayer.colors = [UIColor(hex:colors[0]).cgColor, UIColor(hex:colors[1]).cgColor]
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 0, y: 1)
+        gradientLayer.frame = bounds
+        gradientLayer.cornerRadius = 10
+        return gradientLayer
     }
     
     func getColors() -> [Int]{
