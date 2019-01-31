@@ -7,5 +7,6 @@ target 'Insta Spot' do
 
   pod 'FloatingPanel'
   pod 'SnapLikeCollectionView'
-
+pod  'UnsplashSwift'
+pod 'TinyNetworking'
 end

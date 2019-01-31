@@ -11,12 +11,15 @@
 		371941B521FEDDBE00624BD8 /* CVCSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 371941B321FEDDBE00624BD8 /* CVCSearchCell.xib */; };
 		3737D0E421F30D6200014EDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3737D0E321F30D6200014EDF /* AppDelegate.swift */; };
 		3737D0E921F30D6200014EDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3737D0E721F30D6200014EDF /* Main.storyboard */; };
-		3737D0EC21F30D6200014EDF /* Insta_Spot.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3737D0EA21F30D6200014EDF /* Insta_Spot.xcdatamodeld */; };
 		3737D0EE21F30D6300014EDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3737D0ED21F30D6300014EDF /* Assets.xcassets */; };
 		3737D0F121F30D6300014EDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3737D0EF21F30D6300014EDF /* LaunchScreen.storyboard */; };
 		37A4B75121FFF902008798D2 /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A4B75021FFF902008798D2 /* UICollectionViewExtensions.swift */; };
 		37C628F621FFE8B7003258A1 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C628F521FFE8B7003258A1 /* UIColorExtensions.swift */; };
 		37D9CE9C21FD494F00131F4D /* VCSearchPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D9CE9B21FD494F00131F4D /* VCSearchPanel.swift */; };
+		37EE5F112202A02D00E6B68F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE5F102202A02D00E6B68F /* Constants.swift */; };
+		37EE5F182202B30D00E6B68F /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE5F172202B30D00E6B68F /* Photo.swift */; };
+		37EE5F1F2202B63200E6B68F /* CVCPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE5F1D2202B63200E6B68F /* CVCPhotoCell.swift */; };
+		37EE5F202202B63200E6B68F /* CVCPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37EE5F1E2202B63200E6B68F /* CVCPhotoCell.xib */; };
 		37EFA2C321FABE9700C91900 /* VCMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EFA2C221FABE9700C91900 /* VCMain.swift */; };
 		37EFA2C721FACD8A00C91900 /* VCResultsPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EFA2C621FACD8A00C91900 /* VCResultsPanel.swift */; };
 		37EFA2CC21FAE7F000C91900 /* CVCScrollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EFA2CA21FAE7F000C91900 /* CVCScrollCell.swift */; };
@@ -24,30 +27,22 @@
 		89DE77DB410359B56DF6435A /* Pods_Insta_Spot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCDBD9AEBAF22D3FBFA439D /* Pods_Insta_Spot.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		37D9CEAF21FDBB8100131F4D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3737D0D821F30D6200014EDF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3737D0DF21F30D6200014EDF;
-			remoteInfo = "Insta Spot";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		371941B221FEDDBE00624BD8 /* CVCSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCSearchCell.swift; sourceTree = "<group>"; };
 		371941B321FEDDBE00624BD8 /* CVCSearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CVCSearchCell.xib; sourceTree = "<group>"; };
 		3737D0E021F30D6200014EDF /* Insta Spot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Insta Spot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3737D0E321F30D6200014EDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3737D0E821F30D6200014EDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3737D0EB21F30D6200014EDF /* Insta_Spot.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Insta_Spot.xcdatamodel; sourceTree = "<group>"; };
 		3737D0ED21F30D6300014EDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3737D0F021F30D6300014EDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3737D0F221F30D6300014EDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37A4B75021FFF902008798D2 /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
 		37C628F521FFE8B7003258A1 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		37D9CE9B21FD494F00131F4D /* VCSearchPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCSearchPanel.swift; sourceTree = "<group>"; };
-		37D9CEAA21FDBB8100131F4D /* Insta Spot Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Insta Spot Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		37EE5F102202A02D00E6B68F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		37EE5F172202B30D00E6B68F /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		37EE5F1D2202B63200E6B68F /* CVCPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCPhotoCell.swift; sourceTree = "<group>"; };
+		37EE5F1E2202B63200E6B68F /* CVCPhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CVCPhotoCell.xib; sourceTree = "<group>"; };
 		37EFA2C221FABE9700C91900 /* VCMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMain.swift; sourceTree = "<group>"; };
 		37EFA2C621FACD8A00C91900 /* VCResultsPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCResultsPanel.swift; sourceTree = "<group>"; };
 		37EFA2CA21FAE7F000C91900 /* CVCScrollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCScrollCell.swift; sourceTree = "<group>"; };
@@ -63,13 +58,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				89DE77DB410359B56DF6435A /* Pods_Insta_Spot.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		37D9CEA721FDBB8100131F4D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				3737D0E021F30D6200014EDF /* Insta Spot.app */,
-				37D9CEAA21FDBB8100131F4D /* Insta Spot Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,20 +93,16 @@
 		3737D0E221F30D6200014EDF /* Insta Spot */ = {
 			isa = PBXGroup;
 			children = (
+				37EE5F162202B2D200E6B68F /* Models */,
 				3737D0ED21F30D6300014EDF /* Assets.xcassets */,
-				3737D0F221F30D6300014EDF /* Info.plist */,
-				3737D0EA21F30D6200014EDF /* Insta_Spot.xcdatamodeld */,
-				3737D0EF21F30D6300014EDF /* LaunchScreen.storyboard */,
-				3737D0E321F30D6200014EDF /* AppDelegate.swift */,
-				3737D0E721F30D6200014EDF /* Main.storyboard */,
 				37D9CEA321FD4DCC00131F4D /* Custom */,
-				37EFA2C221FABE9700C91900 /* VCMain.swift */,
-				37EFA2C621FACD8A00C91900 /* VCResultsPanel.swift */,
-				37EFA2CA21FAE7F000C91900 /* CVCScrollCell.swift */,
-				37EFA2CB21FAE7F000C91900 /* CVCScrollCell.xib */,
-				37D9CE9B21FD494F00131F4D /* VCSearchPanel.swift */,
-				371941B221FEDDBE00624BD8 /* CVCSearchCell.swift */,
-				371941B321FEDDBE00624BD8 /* CVCSearchCell.xib */,
+				37EE5F0F2202A00600E6B68F /* Commons */,
+				37EE5F142202A13800E6B68F /* Main */,
+				37EE5F132202A12D00E6B68F /* Results */,
+				37EE5F122202A0E200E6B68F /* Search */,
+				3737D0E721F30D6200014EDF /* Main.storyboard */,
+				3737D0EF21F30D6300014EDF /* LaunchScreen.storyboard */,
+				3737D0F221F30D6300014EDF /* Info.plist */,
 			);
 			path = "Insta Spot";
 			sourceTree = "<group>";
@@ -131,6 +114,69 @@
 				37A4B75021FFF902008798D2 /* UICollectionViewExtensions.swift */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		37EE5F0F2202A00600E6B68F /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				3737D0E321F30D6200014EDF /* AppDelegate.swift */,
+				37EE5F102202A02D00E6B68F /* Constants.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		37EE5F122202A0E200E6B68F /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				37D9CE9B21FD494F00131F4D /* VCSearchPanel.swift */,
+				371941B221FEDDBE00624BD8 /* CVCSearchCell.swift */,
+				371941B321FEDDBE00624BD8 /* CVCSearchCell.xib */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		37EE5F132202A12D00E6B68F /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				37EE5F212202B67E00E6B68F /* Collections */,
+				37EFA2C621FACD8A00C91900 /* VCResultsPanel.swift */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
+		37EE5F142202A13800E6B68F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				37EFA2C221FABE9700C91900 /* VCMain.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		37EE5F162202B2D200E6B68F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				37EE5F172202B30D00E6B68F /* Photo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		37EE5F212202B67E00E6B68F /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+				37EE5F222202B69700E6B68F /* Photos */,
+				37EFA2CA21FAE7F000C91900 /* CVCScrollCell.swift */,
+				37EFA2CB21FAE7F000C91900 /* CVCScrollCell.xib */,
+			);
+			path = Collections;
+			sourceTree = "<group>";
+		};
+		37EE5F222202B69700E6B68F /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				37EE5F1D2202B63200E6B68F /* CVCPhotoCell.swift */,
+				37EE5F1E2202B63200E6B68F /* CVCPhotoCell.xib */,
+			);
+			path = Photos;
 			sourceTree = "<group>";
 		};
 		A42651273B7C43CABA83C0AE /* Pods */ = {
@@ -164,24 +210,6 @@
 			productReference = 3737D0E021F30D6200014EDF /* Insta Spot.app */;
 			productType = "com.apple.product-type.application";
 		};
-		37D9CEA921FDBB8100131F4D /* Insta Spot Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 37D9CEB121FDBB8100131F4D /* Build configuration list for PBXNativeTarget "Insta Spot Tests" */;
-			buildPhases = (
-				37D9CEA621FDBB8100131F4D /* Sources */,
-				37D9CEA721FDBB8100131F4D /* Frameworks */,
-				37D9CEA821FDBB8100131F4D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				37D9CEB021FDBB8100131F4D /* PBXTargetDependency */,
-			);
-			name = "Insta Spot Tests";
-			productName = "Insta Spot Tests";
-			productReference = 37D9CEAA21FDBB8100131F4D /* Insta Spot Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -200,10 +228,6 @@
 							};
 						};
 					};
-					37D9CEA921FDBB8100131F4D = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = 3737D0DF21F30D6200014EDF;
-					};
 				};
 			};
 			buildConfigurationList = 3737D0DB21F30D6200014EDF /* Build configuration list for PBXProject "Insta Spot" */;
@@ -220,7 +244,6 @@
 			projectRoot = "";
 			targets = (
 				3737D0DF21F30D6200014EDF /* Insta Spot */,
-				37D9CEA921FDBB8100131F4D /* Insta Spot Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -233,15 +256,9 @@
 				371941B521FEDDBE00624BD8 /* CVCSearchCell.xib in Resources */,
 				3737D0F121F30D6300014EDF /* LaunchScreen.storyboard in Resources */,
 				37EFA2CD21FAE7F000C91900 /* CVCScrollCell.xib in Resources */,
+				37EE5F202202B63200E6B68F /* CVCPhotoCell.xib in Resources */,
 				3737D0EE21F30D6300014EDF /* Assets.xcassets in Resources */,
 				3737D0E921F30D6200014EDF /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		37D9CEA821FDBB8100131F4D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,15 +296,21 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Insta Spot/Pods-Insta Spot-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FloatingPanel/FloatingPanel.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapLikeCollectionView/SnapLikeCollectionView.framework",
+				"${BUILT_PRODUCTS_DIR}/TinyNetworking/TinyNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/UnsplashSwift/UnsplashSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FloatingPanel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapLikeCollectionView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TinyNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UnsplashSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -304,8 +327,10 @@
 				37A4B75121FFF902008798D2 /* UICollectionViewExtensions.swift in Sources */,
 				37C628F621FFE8B7003258A1 /* UIColorExtensions.swift in Sources */,
 				371941B421FEDDBE00624BD8 /* CVCSearchCell.swift in Sources */,
+				37EE5F1F2202B63200E6B68F /* CVCPhotoCell.swift in Sources */,
 				37EFA2CC21FAE7F000C91900 /* CVCScrollCell.swift in Sources */,
-				3737D0EC21F30D6200014EDF /* Insta_Spot.xcdatamodeld in Sources */,
+				37EE5F182202B30D00E6B68F /* Photo.swift in Sources */,
+				37EE5F112202A02D00E6B68F /* Constants.swift in Sources */,
 				3737D0E421F30D6200014EDF /* AppDelegate.swift in Sources */,
 				37EFA2C721FACD8A00C91900 /* VCResultsPanel.swift in Sources */,
 				37EFA2C321FABE9700C91900 /* VCMain.swift in Sources */,
@@ -313,22 +338,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		37D9CEA621FDBB8100131F4D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		37D9CEB021FDBB8100131F4D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3737D0DF21F30D6200014EDF /* Insta Spot */;
-			targetProxy = 37D9CEAF21FDBB8100131F4D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3737D0E721F30D6200014EDF /* Main.storyboard */ = {
@@ -504,46 +514,6 @@
 			};
 			name = Release;
 		};
-		37D9CEB221FDBB8100131F4D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D87AGA62LJ;
-				INFOPLIST_FILE = "Insta Spot Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "me.grigorii.Insta-Spot-Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Insta Spot.app/Insta Spot";
-			};
-			name = Debug;
-		};
-		37D9CEB321FDBB8100131F4D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D87AGA62LJ;
-				INFOPLIST_FILE = "Insta Spot Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "me.grigorii.Insta-Spot-Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Insta Spot.app/Insta Spot";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -565,29 +535,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		37D9CEB121FDBB8100131F4D /* Build configuration list for PBXNativeTarget "Insta Spot Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				37D9CEB221FDBB8100131F4D /* Debug */,
-				37D9CEB321FDBB8100131F4D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		3737D0EA21F30D6200014EDF /* Insta_Spot.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				3737D0EB21F30D6200014EDF /* Insta_Spot.xcdatamodel */,
-			);
-			currentVersion = 3737D0EB21F30D6200014EDF /* Insta_Spot.xcdatamodel */;
-			path = Insta_Spot.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 3737D0D821F30D6200014EDF /* Project object */;
 }

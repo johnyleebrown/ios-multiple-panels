@@ -1,9 +1,9 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/FloatingPanel" "${PODS_CONFIGURATION_BUILD_DIR}/SnapLikeCollectionView"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Alamofire" "${PODS_CONFIGURATION_BUILD_DIR}/FloatingPanel" "${PODS_CONFIGURATION_BUILD_DIR}/SnapLikeCollectionView" "${PODS_CONFIGURATION_BUILD_DIR}/TinyNetworking" "${PODS_CONFIGURATION_BUILD_DIR}/UnsplashSwift"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/FloatingPanel/FloatingPanel.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/SnapLikeCollectionView/SnapLikeCollectionView.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "FloatingPanel" -framework "SnapLikeCollectionView"
+OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Alamofire/Alamofire.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/FloatingPanel/FloatingPanel.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/SnapLikeCollectionView/SnapLikeCollectionView.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/TinyNetworking/TinyNetworking.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/UnsplashSwift/UnsplashSwift.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "Alamofire" -framework "FloatingPanel" -framework "SnapLikeCollectionView" -framework "TinyNetworking" -framework "UnsplashSwift"
 OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)

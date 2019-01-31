@@ -1,20 +1,36 @@
 PODS:
+  - Alamofire (4.8.1)
   - FloatingPanel (1.3.2)
   - SnapLikeCollectionView (1.1.0)
+  - TinyNetworking (2.1.0):
+    - TinyNetworking/Core (= 2.1.0)
+  - TinyNetworking/Core (2.1.0)
+  - UnsplashSwift (0.2.0):
+    - UnsplashSwift/Core (= 0.2.0)
+  - UnsplashSwift/Core (0.2.0):
+    - Alamofire (~> 4.7)
 
 DEPENDENCIES:
   - FloatingPanel
   - SnapLikeCollectionView
+  - TinyNetworking
+  - UnsplashSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - FloatingPanel
     - SnapLikeCollectionView
+    - TinyNetworking
+    - UnsplashSwift
 
 SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   FloatingPanel: a17dec0ef2b40eb614ee743de1a2529140fb2a6a
   SnapLikeCollectionView: b6f46ad57d104f94d91ce78b721afa43fd2b444b
+  TinyNetworking: a1d9df65811b7b7c8991aab6a866376c92802bd8
+  UnsplashSwift: d4cf856c775ccab2ec1122e2d72222dfd7e56b2d
 
-PODFILE CHECKSUM: 4e8b3157812e792c1d53699d421996e6403b0888
+PODFILE CHECKSUM: d4719bdb8c9c4a4c8b29436f09f5b80f817d6ddf
 
 COCOAPODS: 1.5.3
