@@ -25,10 +25,13 @@ class VCResultsPanel: UIViewController {
     
     @IBOutlet weak var cvPhotos: UICollectionView!
     
-    
     let unsplash = Provider<Unsplash>(clientID: Constants.UnsplashSettings.clientID)
     
     var photos:[Image] = []
+    
+    var url = "photos/fwUvBJOG4-g"
+    
+    var clientid = "358bd86f2c14fc4a7fa0aab41571241aa6a0ffbef4d3109d290ffa13de9e794c"
     
     private var dataSource: SnapLikeDataSource<CVCScrollCell>?
     
@@ -38,26 +41,19 @@ class VCResultsPanel: UIViewController {
     
     var searchVC: VCSearchPanel!
     
-    //
-    //
-    //
-    //
-    //
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        cvPhotos.delegate = self
+        cvPhotos.dataSource = self
+        
         setupLocationsScroll()
         dataSource?.selectItem(IndexPath(item: 0, section: 0))
-        
-        photos[0] = photo(withId: "photos/random?count=2")
     }
     
-    //
-    //
-    //
-    //
-    //
+    var imgURL:String?
+    
+
     
     func setupLocationsScroll() {
         let cellSize = SnapLikeCellSize(normalWidth: 60, centerWidth: 80)
@@ -74,6 +70,7 @@ class VCResultsPanel: UIViewController {
         cvLocsCollection.backgroundColor = .clear
         cvLocsCollection.delegate = dataSource
         cvLocsCollection.dataSource = dataSource
+        
        
         dataSource?.items = [["rome", "Italy"],
                              ["cairo","Egypt"],
@@ -81,43 +78,8 @@ class VCResultsPanel: UIViewController {
                              ["new delhi", "India"]]
     }
     
-    func photo(withId id: String) -> Image {
-        var image:Image?
-        
-        let url = URL(string: "https://api.unsplash.com/photos/random?count=1&client_id=358bd86f2c14fc4a7fa0aab41571241aa6a0ffbef4d3109d290ffa13de9e794c")
-        
-        var req:URLRequest!
-        do {
-            req = try URLRequest(url: url!, method: .get)
-        } catch let e{
-            print(e)
-        }
-        
-        URLSession.shared.dataTask(with: req) { (data, response, error) in
-            if error != nil {
-                print(error!)
-                return
-            } else {
-                do {
-                    image = try JSONDecoder().decode(Image.self, from: data!)
-                } catch let e {
-                    print(e)
-                }
-            }
-        }.resume()
-        
-       
-        print(".. should return here")
-        return image!
-        
-    }
+   
 }
-
-//
-//
-//
-//
-//
 
 extension VCResultsPanel:UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -126,26 +88,15 @@ extension VCResultsPanel:UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell:CVCPhotoCell = cvPhotos.dequeueReusableCell(withReuseIdentifier: "PlacePhotoCell", for: indexPath) as! CVCPhotoCell
+        let cell = cvPhotos.dequeueReusableCell(withReuseIdentifier: "PlacePhotoCell", for: indexPath)
         
-        cell.setPhoto(photo:photos[indexPath.row])
-
+        if let photoCell = cell as? CVCPhotoCell {
+            photoCell.downloadPhoto()
+        }
+        
         return cell
     }
 }
-
-
-extension URL {
-    private static var baseUrl: String {
-        return "https://api.unsplash.com/"
-    }
-    
-    static func with(string: String) -> URL? {
-        return URL(string: "\(baseUrl)\(string)")
-    }
-    
-}
-
 
 extension VCResultsPanel: SnapLikeDataDelegate {
     func cellSelected(_ index: Int) {
@@ -158,19 +109,4 @@ extension VCResultsPanel: SnapLikeDataDelegate {
             )
         }
     }
-}
-
-struct Image: Decodable {
-    let id: String
-    let width: Int
-    let height: Int
-    let color: String
-}
-
-struct URLs: Decodable {
-    let raw: String
-    let full: String
-    let regular: String
-    let small: String
-    let thumb: String
 }
