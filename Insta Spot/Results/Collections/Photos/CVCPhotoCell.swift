@@ -14,7 +14,7 @@ class CVCPhotoCell: UICollectionViewCell {
     
     private var imageDataTask: URLSessionDataTask?
     
-    let urlPhoto = URL(string: "https://images.unsplash.com/photo-1547913817-682f6e1df551?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb")
+    let urlPhoto = URL(string: "https://images.unsplash.com/photo-1557149559-f5ee3514db38?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjUzODQxfQ")
     
     let url = URL(string: "https://api.unsplash.com/photos/random?count=1&client_id=358bd86f2c14fc4a7fa0aab41571241aa6a0ffbef4d3109d290ffa13de9e794c")
     
