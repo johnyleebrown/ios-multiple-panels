@@ -127,7 +127,6 @@ class VCMain: UIViewController {
         resultsVC = storyboard?.instantiateViewController(withIdentifier: "ResultsPanel") as? VCResultsPanel
         resultsVC.delegate = self
         
-        
         // Set a content view controller
         fpcResults.set(contentViewController: resultsVC)
         fpcResults.track(scrollView: resultsVC.svLocationContent)
@@ -200,12 +199,12 @@ extension VCMain:VCMainDelegate {
     
     func setPanel(panel: String, position: FloatingPanelPosition) {
         switch panel {
-        case "result":
-            fpcResults.move(to: position, animated: true)
-        case "search":
-            fpcSearch.move(to: position, animated: true)
-        default:
-            return
+            case "result":
+                fpcResults.move(to: position, animated: true)
+            case "search":
+                fpcSearch.move(to: position, animated: true)
+            default:
+                return
         }
     }
     
